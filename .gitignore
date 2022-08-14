@@ -1,31 +1,17 @@
+print ('Привет, тут ты можешь сыграть сам с собой в шахматы V1, Только короли')
 
-import math
-def proverka(n):
-    result = True
-    for i in range(1, int(math.sqrt(n))):
-        if n % i == 0:
-            result = False
-            break
-    return result
+white = 1 #кол-во белых фигур
+black = 1 #кол-во черных фигур
+sequenсe = True # True белый ходит, False черный ходит
 
-def gg(a1,a2):
-    prost = a2 // math.gcd(a1, a2)
-    if not proverka(prost): 
-        for i in range(1, prost // 2):
-            if prost % i == 0:
-                prost = prost // i
-                
-    return prost
+doska = list('*' * 8 for _ in range(8))
+
+
+def go(kyda):
     
 
-    
 
-for _ in range(int(input())):
-    ab = input().split()
-    a, b = int(ab[0]), int(ab[1])
-    
-    prost = 0
-    if a < b:
-        print (math.gcd(a * gg(a, b), b))
-    elif a > b:
-        print (math.gcd(b * gg(b, a), a))
+
+While no white or black:
+    if sequenсe:
+        go()
