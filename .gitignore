@@ -4,7 +4,15 @@ white = 1 #кол-во белых фигур
 black = 1 #кол-во черных фигур
 sequenсe = True # True белый ходит, False черный ходит
 
-doska = list('*' * 8 for _ in range(8))
+doska = list('* ' * 8 for _ in range(8))
+
+def printdoska():
+    print ('  A B C D E F G H ')
+    for i in range (8):
+        print (8 - i, doska[i] + str(8 - i))
+    print ('  A B C D E F G H ')
+
+printdoska()
 
 
 def go(kyda):
